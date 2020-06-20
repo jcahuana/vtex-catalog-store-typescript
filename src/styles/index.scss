@@ -1,0 +1,9 @@
+@import "custom";
+
+// Importamos todos bootstrap
+// TODO: podemos importar únicamente los módulos que necesitamos
+// @import "~bootstrap/scss/bootstrap"
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// estilos generales
+@import "./base";
