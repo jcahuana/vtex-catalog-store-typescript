@@ -1,13 +1,23 @@
 import React from 'react'
+import ProductFilter from 'components/ProductFilter'
 import ProductCard from 'components/ProductCard'
+import './index.scss';
 
 function ProductPage() {
   return (
     <div className="container-xl">
-      <div className="row">
-        <div className="col-sm col-md-4">
+      <div className="ProductPage">
+        <div className="ProductPage__sidebar">
+          <ProductFilter />
         </div>
-        <div className="col-sm col-md-8">
+        <div className="ProductPage__content">
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>

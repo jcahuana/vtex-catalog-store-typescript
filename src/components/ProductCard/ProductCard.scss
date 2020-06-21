@@ -1,0 +1,14 @@
+.ProductCard {
+  max-width: 216px;
+  border-radius: 10px;
+  min-height: 328px;
+
+  &__badge {
+    height: 22px;
+    border-radius: 9px;
+    width: 100%;
+    width: 108px;
+    font-size: 10.5px;
+    padding-bottom: 4px;
+  }
+}
