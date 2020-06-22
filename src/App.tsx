@@ -1,13 +1,18 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import generateStore from './redux/store';
+import ProductPage from './pages/product';
 
-import ProductPage from 'pages/product';
+const store = generateStore();
+console.log('store', store);
+
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
       <ProductPage />
-    </div>
+    </Provider>
   );
 }
 

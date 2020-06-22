@@ -1,7 +1,13 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 import './ProductFilter.scss'
 
-function ProductFilter() {
+interface propsInterface {
+  handleClick: () => void;
+}
+
+
+function ProductFilter({ handleClick }: propsInterface ) {
   return (
     <div className="ProductFilter card">
       <div className="card-body">
@@ -12,7 +18,7 @@ function ProductFilter() {
               Nuevos lanzamientos
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <li><button className="dropdown-item" type="button">Action</button></li>
+              <li><button className="dropdown-item" type="button" onClick={handleClick}>Buscar</button></li>
               <li><button className="dropdown-item" type="button">Another action</button></li>
               <li><button className="dropdown-item" type="button">Something else here</button></li>
             </ul>
@@ -23,5 +29,9 @@ function ProductFilter() {
     </div>
   )
 }
+/* ProductFilter.propTypes = {
+  handleClick: PropTypes.func
+}
+ */
 
 export default ProductFilter
