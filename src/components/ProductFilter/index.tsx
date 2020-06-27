@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import ProductFilter from './ProductFilter'
-import { useDispatch, useSelector } from 'react-redux';
-import { getProductsAction } from 'redux/productDucks';
+import { useDispatch } from 'react-redux';
+import { Creators } from 'redux/productDucks';
 
 function ProductFilterContainer() {
   const dispatch = useDispatch();
 
 
   const handleClick = () : void  => {
-    dispatch(getProductsAction());
+    dispatch(Creators.getProductsAction());
   };
 
   return (

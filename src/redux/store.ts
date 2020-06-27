@@ -1,16 +1,19 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
+import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
 
 import productsReducer from './productDucks';
 
-const rootReducer = combineReducers({
+const reducers = combineReducers({
   products: productsReducer
 });
 
-// const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const middleware: any = [...getDefaultMiddleware(), logger];
 
-export default function generateStore(){
-  const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
-  return store;
-}
+const store = configureStore({
+  reducer: reducers,
+  middleware,
+  devTools: process.env.NODE_ENV !== 'production',
+});
+
+export default store;
+

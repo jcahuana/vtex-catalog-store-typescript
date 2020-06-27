@@ -1,11 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import generateStore from './redux/store';
+import store from './redux/store';
 import ProductPage from './pages/product';
 
-const store = generateStore();
-console.log('store', store);
+// const store = generateStore();
+// console.log('store', store);
 
 
 function App() {
