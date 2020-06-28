@@ -1,16 +1,13 @@
-import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import {  configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-
-import productsReducer from './productDucks';
-
-const reducers = combineReducers({
-  products: productsReducer
-});
+import productsReducer from './ducks/productsDucks';
 
 const middleware: any = [...getDefaultMiddleware(), logger];
 
 const store = configureStore({
-  reducer: reducers,
+  reducer: {
+    products: productsReducer
+  },
   middleware,
   devTools: process.env.NODE_ENV !== 'production',
 });
