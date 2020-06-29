@@ -1,18 +1,13 @@
-@import "~styles/mixins";
-
 .ProductPage {
   padding-top: 43px;
-  @include media-breakpoint-up(md) {
+  /* @include media-breakpoint-up(md) {
     display: grid;
     grid-template-columns: 3fr 7fr;
     grid-column-gap: 24px;
-  }
+  } */
 
   &__sidebar {
     width: 100%;
-  }
-  &__content {
-
   }
   &__productList {
     display: grid;
@@ -20,8 +15,8 @@
     grid-row-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
-    @include media-breakpoint-up(md) {
-      justify-items: left;
-    }
+    // @include media-breakpoint-up(md) {
+    //   justify-items: left;
+    // }
   }
 }

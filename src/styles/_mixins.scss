@@ -1,15 +1,9 @@
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-
-/* $grid-breakpoints: (
+$grid-breakpoints: (
   xs: 0,
-  sm: 576px,
+  sm: 640px,
   md: 768px,
-  lg: 992px,
-  xl: 1200px,
+  lg: 1024px,
+  xl: 1280px,
   xxl: 1400px
 );
 
@@ -39,4 +33,5 @@
       @content;
     }
   }
-} */
+}
+

@@ -1,8 +1,7 @@
-@import "custom_theme";
+// @import "custom_theme";
+// @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-// estilos generales
+@import "./tailwind.generated";
 @import "./base";
 
-@import "./custom_classes";
+// @import "./custom_classes";
